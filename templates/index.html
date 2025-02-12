@@ -1,42 +1,203 @@
-{% extends 'base.html' %}
+{% extends 'base-layanan-kesehatan-digital.html' %}
 
-{% block title %}Home - My Website{% endblock %}
+{% block title %}Beranda - Sistem Layanan Kesehatan Digital{% endblock %}
 
 {% block content %}
-<div class="hero">
-    <h1>Welcome to My Modern Website</h1>
+
+<div class="home">
+    <div class="home_slider_container">
+        <div class="owl-carousel owl-theme home_slider owl-loaded owl-drag">
+            <div class="owl-item home_slider_item">
+                <div class="home_slider_background"></div>
+                <div class="home_slider_content text-center">
+                    <div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
+                        <h1></h1>
+                        <h1>Sistem Layanan Kesehatan Digital</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="owl-item home_slider_item">
+                <div class="home_slider_background"></div>
+                <div class="home_slider_content text-center">
+                    <div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
+                        <h1></h1>
+                        <h1>Sistem Layanan Kesehatan Digital</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="owl-item home_slider_item">
+                <div class="home_slider_background"></div>
+                <div class="home_slider_content text-center">
+                    <div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
+                        <h1></h1>
+                        <h1>Sistem Layanan Kesehatan Digital</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="home_slider_nav home_slider_prev">
+            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="28px" height="33px" viewBox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
+                <defs>
+                    <linearGradient id='home_grad_prev'>
+                        <stop offset='0%' stop-color='#0938f0'/>
+                        <stop offset='100%' stop-color='#f6d639'/>
+                    </linearGradient>
+                </defs>
+                <path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
+                M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
+                C22.545,2,26,5.541,26,9.909V23.091z"/>
+                <polygon class="nav_arrow" fill="#F3F6F9" points="15.044,22.222 16.377,20.888 12.374,16.885 16.377,12.882 15.044,11.55 9.708,16.885 11.04,18.219 
+                11.042,18.219 "/>
+            </svg>
+        </div>
+        
+        <div class="home_slider_nav home_slider_next">
+            <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="28px" height="33px" viewBox="0 0 28 33" enable-background="new 0 0 28 33" xml:space="preserve">
+                <defs>
+                    <linearGradient id='home_grad_next'>
+                        <stop offset='0%' stop-color='#0938f0'/>
+                        <stop offset='100%' stop-color='#f6d639'/>
+                    </linearGradient>
+                </defs>
+            <path class="nav_path" fill="#F3F6F9" d="M19,0H9C4.029,0,0,4.029,0,9v15c0,4.971,4.029,9,9,9h10c4.97,0,9-4.029,9-9V9C28,4.029,23.97,0,19,0z
+            M26,23.091C26,27.459,22.545,31,18.285,31H9.714C5.454,31,2,27.459,2,23.091V9.909C2,5.541,5.454,2,9.714,2h8.571
+            C22.545,2,26,5.541,26,9.909V23.091z"/>
+            <polygon class="nav_arrow" fill="#F3F6F9" points="13.044,11.551 11.71,12.885 15.714,16.888 11.71,20.891 13.044,22.224 18.379,16.888 17.048,15.554 
+            17.046,15.554 "/>
+            </svg>
+        </div>
+
+        <div class="home_slider_dots">
+            <ul id="home_slider_custom_dots" class="home_slider_custom_dots">
+                <li class="home_slider_custom_dot active"><div></div>01.</li>
+                <li class="home_slider_custom_dot"><div></div>02.</li>
+                <li class="home_slider_custom_dot"><div></div>03.</li>
+            </ul>
+        </div>
+    </div>
 </div>
 
-<div class="row mt-5">
-    <div class="col-md-4" style="padding: 20px;">
-        <div class="card">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Card 1">
-            <div class="card-body">
-                <h5 class="card-title">Card Title 1</h5>
-                <p class="card-text">This is a short description for card 1.</p>
-                <a href="/card-title1" class="btn btn-primary">Read More</a>
-            </div>
+<div class="search">
+    <div class="container fill_height">
+        <div class="row fill_height">
+             <div class="search_tabs_container">
+                    <div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+                        <div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/what.png') }}" alt=""><span>what</span></div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/who.png') }}" alt="">who</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/where.png') }}" alt="">where</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/when.png') }}" alt="">when</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/why.png') }}" alt="">why</div>
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/how.png') }}" alt="">how</div>
+                    </div>		
+                </div>
         </div>
-    </div>
-    <div class="col-md-4" style="padding: 20px;">
-        <div class="card">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Card 2">
-            <div class="card-body">
-                <h5 class="card-title">Card Title 2</h5>
-                <p class="card-text">This is a short description for card 2.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4" style="padding: 20px;">
-        <div class="card">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Card 3">
-            <div class="card-body">
-                <h5 class="card-title">Card Title 3</h5>
-                <p class="card-text">This is a short description for card 3.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+    </div>		
+</div>
+
+<div class="cta">
+    <div class="cta_background" style="background-image:url(/static/layanan-kesehatan-digital/images/bg1.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="owl-item cta_item text-center">
+                    <div class="cta_title">what</div>
+                    <div></div>
+                    <p class="cta_text">Sistem Layanan Kesehatan Digital adalah pemanfaatan teknologi informasi dan komunikasi untuk meningkatkan akses, efisiensi, dan kualitas layanan kesehatan. Ini termasuk platform yang menyediakan layanan kesehatan secara digital, seperti konsultasi online, pembelian obat, reservasi layanan kesehatan, dan manajemen pasien.</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="cta">
+    <div class="cta_background" style="background-image:url(/static/layanan-kesehatan-digital/images/bg1.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="owl-item cta_item text-center">
+                    <div class="cta_title">who</div>
+                    <div></div>
+                    <p class="cta_text">Pengguna utama sistem layanan kesehatan digital meliputi:
+                        <ul class="erd_text_bullets">
+                            <li>Pasien: Untuk berkonsultasi dengan dokter, mengakses rekam medis, dan memantau kondisi kesehatan.</li>
+                            <li>Tenaga medis (dokter, perawat, dan profesional kesehatan lainnya): Untuk memberikan konsultasi, meresepkan obat, serta memantau pasien.</li>
+                            <li>Penyedia layanan kesehatan: Rumah sakit, klinik, atau pusat kesehatan yang menggunakan platform digital untuk layanan mereka.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta">
+    <div class="cta_background" style="background-image:url(/static/layanan-kesehatan-digital/images/bg1.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="owl-item cta_item text-center">
+                    <div class="cta_title">where</div>
+                    <div></div>
+                    <p class="cta_text">Sistem layanan kesehatan digital dapat diakses melalui berbagai perangkat, seperti smartphone, komputer, atau perangkat medis yang terhubung. Ini dapat diterapkan di seluruh dunia, baik di daerah perkotaan maupun pedesaan, dan sangat berguna di tempat dengan sumber daya medis terbatas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta">
+    <div class="cta_background" style="background-image:url(/static/layanan-kesehatan-digital/images/bg1.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="owl-item cta_item text-center">
+                    <div class="cta_title">when</div>
+                    <div></div>
+                    <p class="cta_text">Layanan kesehatan digital dapat digunakan kapan saja sesuai kebutuhan pasien dan tenaga medis. Banyak sistem yang tersedia 24/7, memungkinkan konsultasi atau pemantauan jarak jauh tanpa terbatas waktu. Ini sangat berguna untuk keadaan darurat medis atau kebutuhan yang tidak memerlukan kunjungan fisik langsung.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta">
+    <div class="cta_background" style="background-image:url(/static/layanan-kesehatan-digital/images/bg1.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="owl-item cta_item text-center">
+                    <div class="cta_title">why</div>
+                    <div></div>
+                    <p class="cta_text">Tujuan utama dari sistem layanan kesehatan digital adalah untuk meningkatkan efisiensi dan kualitas layanan kesehatan. Ini membantu mengurangi hambatan jarak, waktu tunggu, dan biaya. Dapat memudahkan pemantauan kesehatan secara real-time serta meningkatkan kolaborasi antara tenaga medis dan pasien.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta">
+    <div class="cta_background" style="background-image:url(/static/layanan-kesehatan-digital/images/bg1.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="owl-item cta_item text-center">
+                    <div class="cta_title">how</div>
+                    <div></div>
+                    <p class="cta_text">Layanan kesehatan digital bekerja melalui aplikasi perangkat lunak yang memungkinkan komunikasi antara pasien dan tenaga medis. Data medis pasien, seperti riwayat penyakit atau hasil tes, dapat disimpan dalam bentuk digital yang terintegrasi untuk memudahkan akses dan kolaborasi antar profesional kesehatan.
+                        Secara keseluruhan, sistem layanan kesehatan digital membuat perawatan lebih mudah, lebih cepat, dan lebih terjangkau dengan memanfaatkan teknologi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

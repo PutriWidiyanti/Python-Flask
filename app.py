@@ -6,25 +6,21 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 def home():
     return render_template('index.html')
 
-@app.route('/about')
+@app.route('/konsep-basis-data')
 def about():
-    return render_template('about.html')
+    return render_template('konsep-basis-data.html')
 
-@app.route('/contact')
+@app.route('/erd-layanan-kesehatan-digital')
 def contact():
-    return render_template('contact.html')
+    return render_template('erd-layanan-kesehatan-digital.html')
 
-@app.route('/profile')
+@app.route('/flask')
 def profile():
-    return render_template('profile.html')
+    return render_template('flask.html')
 
-@app.route('/visi-misi')
+@app.route('/jinja')
 def vision_mission():
-    return render_template('visi-misi.html')
-
-@app.route('/card-title1')
-def card_title1():
-    return render_template('card-title1.html')
+    return render_template('jinja.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

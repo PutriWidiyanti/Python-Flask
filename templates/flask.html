@@ -1,0 +1,364 @@
+{% extends 'base-layanan-kesehatan-digital.html' %}
+
+{% block title %}Flask - Sistem Layanan Kesehatan Digital{% endblock %}
+
+{% block content %}
+<div class="super_container">
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/static/layanan-kesehatan-digital/images/bd_erd.jpg"></div>
+		<div class="home_content">
+            <div class="home_title">Flask</div>
+		</div>
+	</div>
+
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="intro_image"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/flask_python.png') }}" alt=""></div>
+				</div>
+				<div class="col-lg-5">
+					<div class="intro_content">
+						<div class="intro_title">flask</div>
+						<p class="intro_text">
+                            Framework web micro yang digunakan untuk membangun aplikasi web dengan menggunakan bahasa pemrograman Python. Dirancang untuk membuat aplikasi web kecil. Fitur flask diantaranya terdapat routing URL, handling request, template rendering, dll. Flask dikenal dengan prinsip "micro", yang artinya hanya menyediakan fitur-fitur inti yang dibutuhkan untuk membangun aplikasi web, sementara fitur lainnya dapat ditambahkan melalui ekstensi. Hal ini membuat Flask cocok untuk pengembang yang ingin lebih banyak kontrol terhadap struktur dan arsitektur aplikasi mereka.
+                        </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Fitur Flask-->
+
+    <div class="offers">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="section_title">Fitur Flask</h2>
+                </div>
+            </div>
+            <div class="row offers_items">
+    
+                <!-- Offers Item -->
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/url.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>routing url</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask memungkinkan pengembang untuk mengatur rute URL yang menghubungkan URL tertentu dengan fungsi Python. Ini membuat pengelolaan request dan response lebih mudah.</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offers Item -->
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/template_jinja.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>templating (jinja2)</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask menggunakan Jinja2 sebagai sistem templating, yang memungkinkan pengembang untuk membuat tampilan HTML dinamis dengan cara menyisipkan data Python ke dalam template HTML.</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Offers Item -->
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/request_response.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>request dan response</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask menyediakan cara mudah untuk menangani HTTP request (GET, POST, dll.) dan membuat response. Pengembang dapat memanipulasi data yang diterima dari pengguna dan memberikan respons yang sesuai.</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Offers Item -->
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/session.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>session</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask menyediakan dukungan untuk session management, yang memungkinkan aplikasi untuk menyimpan informasi antar permintaan (misalnya, login pengguna).</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/flask_extensions.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>flask extensions</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask dapat diperluas dengan berbagai ekstensi yang menyediakan fitur tambahan seperti integrasi dengan database (SQLAlchemy), otentikasi pengguna (Flask-Login), dan validasi form (Flask-WTF).</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/error_handling.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>error handling</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask memungkinkan pengembang untuk menangani berbagai jenis error, seperti 404 (halaman tidak ditemukan) dan 500 (kesalahan server), dengan cara yang fleksibel.</br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/blueprints.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>blueprints</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Blueprints memungkinkan pengembang untuk memecah aplikasi besar menjadi bagian-bagian yang lebih kecil dan lebih mudah dikelola. Setiap blueprint dapat memiliki route, template, dan fungsi khusus.</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/rest_api.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>RESTful API Support</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask sangat mendukung pembuatan RESTful APIs, dengan cara membuat rute yang menangani berbagai metode HTTP (GET, POST, PUT, DELETE) dan bekerja dengan data JSON.</br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/testing.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>testing</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask dilengkapi dengan tools untuk melakukan unit testing pada aplikasi, yang membantu pengembang untuk memastikan aplikasi berfungsi dengan baik.</br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/websocket.png)"></div>
+                                    <div class="fitur_flask_name"><p>Support for WebSockets</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask dapat menggunakan Flask-SocketIO untuk mendukung komunikasi real-time berbasis WebSockets, memungkinkan aplikasi seperti chat atau notifikasi langsung.</br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/static_file.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>static files</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask menyediakan cara untuk melayani file statis seperti gambar, CSS, dan JavaScript.</br></br></br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/server_development.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>Development Server</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Flask menyediakan server pengembangan bawaan yang dapat digunakan selama tahap pengembangan untuk menjalankan aplikasi dan melihat perubahan secara langsung tanpa konfigurasi tambahan.</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,329 @@
+{% extends 'base-layanan-kesehatan-digital.html' %}
+
+{% block title %}Konsep Basis Data - Sistem Layanan Kesehatan Digital{% endblock %}
+
+{% block content %}
+<div class="super_container">
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/static/layanan-kesehatan-digital/images/bd_kbd.jpg"></div>
+		<div class="home_content">
+			<div class="home_title">konsep basis data</div>
+		</div>
+	</div>
+
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="intro_image"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/basis_data.png') }}" alt=""></div>
+				</div>
+				<div class="col-lg-5">
+					<div class="intro_content">
+						<div class="intro_title">basis data</div>
+						<p class="intro_text">Basis data (database) adalah sekumpulan data yang disimpan secara terorganisir dan terstruktur dalam bentuk tabel, sehingga memudahkan penyimpanan, pencarian, pengelolaan, dan pengambilan data. Data yang tersimpan dalam basis data biasanya saling berhubungan dan bisa diakses, diubah, atau diperbarui dengan cara yang efisien.
+							</br>Tujuan utama dari basis data adalah untuk menyediakan tempat penyimpanan data yang terorganisir dengan baik dan dapat diakses sesuai kebutuhan. Basis data dapat digunakan untuk berbagai macam aplikasi, mulai dari sistem informasi, aplikasi bisnis, e-commerce, hingga aplikasi media sosial.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="offers">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="section_title">Berikut adalah beberapa konsep dasar dalam basis data</h2>
+                </div>
+            </div>
+            <div class="row offers_items">
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/data.png)"></div>
+                                    <div class="fitur_flask_name"><p>data</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Merupakan fakta atau informasi yang disimpan dalam basis data. Data bisa berupa angka, teks, gambar, atau jenis data lainnya.</br></br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offers Item -->
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/tabel.png)"></div>
+                                    <div class="fitur_flask_name"><p>tabel</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Struktur utama dalam basis data yang menyimpan data dalam bentuk baris dan kolom. Setiap tabel mewakili suatu entitas atau objek tertentu.</br></br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/row.png)"></div>
+                                    <div class="fitur_flask_name"><p>baris (row)</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text"> Setiap baris dalam tabel disebut juga rekaman (record). Baris ini berisi data untuk satu entitas atau objek tertentu. Misalnya, satu baris dalam tabel "Mahasiswa" berisi informasi untuk satu mahasiswa.</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/column.png)"></div>
+                                    <div class="fitur_flask_name"><p>kolom (column)</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Kolom menggambarkan atribut atau karakteristik dari entitas yang disimpan. Misalnya, kolom "Nama" atau "NIM" dalam tabel "Mahasiswa" mewakili informasi yang relevan tentang mahasiswa.</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/key.png)"></div>
+                                    <div class="fitur_flask_name"><p>kunci (key)</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Atribut atau sekumpulan atribut yang digunakan untuk mengidentifikasi data secara unik dalam suatu tabel atau untuk menghubungkan data antar tabel.</br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/relasi.png)"></div>
+                                    <div class="fitur_flask_name"><p>relasi</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Merupakan hubungan antara tabel-tabel dalam basis data. Relasi ini menghubungkan data antar tabel berdasarkan kunci asing dan kunci utama.</br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/dbms.png)"></div>
+                                    <div class="fitur_flask_name"><p>DBMS</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Merupakan perangkat lunak yang digunakan untuk mengelola, menyimpan, dan mengakses basis data. Contoh DBMS yang populer adalah MySQL, PostgreSQL, Oracle, dan Microsoft SQL Server.</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/normalisasi.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>normalisasi</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Proses untuk merancang struktur basis data agar lebih efisien dengan mengurangi duplikasi data. Normalisasi membagi data menjadi beberapa tabel yang saling terhubung melalui kunci asing.</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/sql.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>sql</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Structured Query Language merupakan bahasa yang digunakan untuk berinteraksi dengan basis data, seperti untuk mengambil data (SELECT), memasukkan data (INSERT), memperbarui data (UPDATE), atau menghapus data (DELETE).</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/transaction.png)"></div>
+                                    <div class="fitur_flask_name"><p>Transaksi</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Serangkaian operasi yang dijalankan secara bersamaan dan saling bergantung, yang memastikan integritas data.</br></br></br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+                                    <div class="offers_image_background" style="background-image:url(/static/layanan-kesehatan-digital/images/integritas_data.jpg)"></div>
+                                    <div class="fitur_flask_name"><p>integritas data</p></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                    <p class="offers_text">Data yang merujuk pada keadaan di mana data yang disimpan dalam basis data tetap akurat, konsisten, dan terpercaya sepanjang waktu.</br></br></br></p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                            <li class="offers_icons_item"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

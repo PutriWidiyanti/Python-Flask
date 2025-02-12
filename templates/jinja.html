@@ -1,0 +1,81 @@
+{% extends 'base-layanan-kesehatan-digital.html' %}
+
+{% block title %}Jinja - Sistem Layanan Kesehatan Digital{% endblock %}
+
+{% block content %}
+<div class="super_container">
+
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/static/layanan-kesehatan-digital/images/bd_jinja.jpg"></div>
+		<div class="home_content">
+            <div class="home_title">Jinja</div>
+		</div>
+	</div>
+
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="intro_image"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/jinja.png') }}" alt=""></div>
+				</div>
+				<div class="col-lg-5">
+					<div class="intro_content">
+						<div class="intro_title">statement dan logika</div>
+						<p class="intro_text">
+                            Dalam Python, khususnya saat menggunakan Flask dengan template engine Jinja2 tanda {{ '{{' }}% %{{ '}}' }} adalah sintaks untuk menulis statement (pernyataan) atau logika di dalam file template HTML, digunakan untuk menjalankan kode Python dalam file HTML
+                        </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="about_image">
+						<img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/template_inheritance.png') }}" alt="">
+					</div>
+				</div>
+
+                <div class="col-lg-4">
+                    <div class="logo_container about_logo">
+                        <div class="jinja">Menggunakan Template Inheritance</div>
+                    </div>
+                    <ul class="contact_info_list">
+                        <li class="contact_info_item d-flex flex-row">
+                            <div><div class="contact_info_icon"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/bullet.png') }}" alt=""></div></div>
+                            <div class="contact_info_text"><b>{{ '{{' }}% extends 'base.html' %{{ '}}' }}</b></br>Menandakan bahwa file ini menggunakan template base.html.</div>
+                        </li>
+                        <li class="contact_info_item d-flex flex-row">
+                            <div><div class="contact_info_icon"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/bullet.png') }}" alt=""></div></div>
+                            <div class="contact_info_text"><b>{{ '{{' }}% block title %{{ '}}' }}</b></br>Mendefinisikan konten khusus untuk blok title di base.html.</div>
+                        </li>
+                        <li class="contact_info_item d-flex flex-row">
+                            <div><div class="contact_info_icon"><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/bullet.png') }}" alt=""></div></div>
+                            <div class="contact_info_text"><b>{{ '{{' }}% block content %{{ '}}' }}</b></br>Mendefinisikan konten khusus untuk blok content.</div>
+                        </li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</div>
+
+    <div class="offers">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="section_title">Perbandingan {{ '{' }}% %{{ '}' }}, {{ '{{' }}{{ '}}' }}, {{ '{' }}# #{{ '}' }}</h2>
+                </div>
+            </div>
+            <div class="row offers_items">
+                <div class="col text-center">
+                    <img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/perbandingan_jinja.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

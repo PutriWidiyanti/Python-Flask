@@ -1,0 +1,102 @@
+{% extends 'base-layanan-kesehatan-digital.html' %}
+
+{% block title %}ERD - Sistem Layanan Kesehatan Digital{% endblock %}
+
+{% block content %}
+<div class="super_container">
+
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/static/layanan-kesehatan-digital/images/flask_background.jpg"></div>
+		<div class="home_content">
+			<div class="home_title_erd">ERD</div>
+            <div class="home_title_erd">Sistem Layanan Kesehatan Digital</div>
+		</div>
+	</div>
+
+	<div class="intro">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 text-center">
+					<p class="erd_text">Entity Relationship Diagram (ERD) untuk Sistem Layanan Kesehatan Digital menggambarkan hubungan antara entitas utama dalam platform yang menyediakan layanan kesehatan secara digital, seperti konsultasi online, pembelian obat, reservasi layanan kesehatan, dan manajemen pasien.</p>
+					<p class="erd_text">Berikut adalah gambaran ERD yang bisa diterapkan pada sistem layanan kesehatan digital :</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-7">
+					<div><img src="{{ url_for('static', filename='layanan-kesehatan-digital/images/erd_new.png') }}" width=auto height=auto alt=""></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 text-center">
+					<p class="erd_text">Berikut adalah penjelasan tentang ERD untuk sistem layanan kesehatan digital : </br>
+						<ol class="erd_text_number">
+							<li><strong>Pasien</strong> : Pengguna utama yang mencari layanan kesehatan
+								<ul class="erd_text_bullets">
+									<li>Atribut  : pasien_id, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, alamat, handphone dan email.</li>
+									<li>Relasi   : Pasien dapat melakukan banyak Jadwal Konsultasi dan Pemesanan Layanan.</li>
+								</ul>
+							</li>
+							<li><strong>Dokter</strong> : Profesional kesehatan yang memberikan layanan medis kepada pasien
+								<ul class="erd_text_bullets">
+									<li>Atribut  : dokter_id, nama_dokter, spesialis, alamat, handphone dan email.</li>
+									<li>Relasi   : Setiap Dokter dapat memiliki banyak Jadwal Praktek dan Jadwal Konsultasi. </li>
+								</ul>
+							</li>
+							<li><strong>Jadwal Praktek</strong> : Jadwal seorang dokter atau tenaga medis tersedia untuk memberikan layanan kepada pasien
+								<ul class="erd_text_bullets">
+									<li>Atribut  : jadwal_praktek_id, hari, jam_tersedia dan dokter_id.</li>
+									<li>Relasi   : Setiap Jadwal Praktek hanya dapat dimiliki oleh satu Dokter. Tetapi, satu Dokter dapat memiliki banyak Jadwal Praktek. </li>
+								</ul>
+							</li>
+							<li><strong>Jadwal Konsultasi</strong> : Jadwal untuk pertemuan antara pasien dan dokter
+								<ul class="erd_text_bullets">
+									<li>Atribut  : jadwal_konsultasi_id, tanggal_konsultasi, waktu, status, pasiend_id dan dokter_id.</li>
+									<li>Relasi   : Setiap Jadwal Konsultasi dimiliki oleh satu Pasien dan satu Dokter </li>
+								</ul>
+							</li>
+							<li><strong>Konsultasi</strong> : Proses di mana pasien bertemu dengan dokter untuk mendapatkan pemeriksaan medis atau nasihat kesehatan
+								<ul class="erd_text_bullets">
+									<li>Atribut  : konsultasi_id, tanggal_konsultasi, diagnosa, hasil_konsultasi, status_konsultasi dan jadwal_konsultasi_id.</li>
+									<li>Relasi   : Tabel Konsultasi menyimpan catatan hasil konsultasi, termasuk diagnosa dan terkait dengan Jadwal Konsultasi. </li>
+								</ul>
+							</li>
+							<li><strong>Resep</strong> : Dokumen atau catatan yang diberikan oleh dokter setelah konsultasi yang berisi instruksi tentang pengobatan atau terapi yang perlu dijalani pasien
+								<ul class="erd_text_bullets">
+									<li>Atribut  : resep_id, tanggal_diberikan, total_harga dan konsultasi_id.</li>
+									<li>Relasi   : Satu Konsultasi dapat menghasilkan satu atau banyak Resep.</li>
+								</ul>
+							</li>
+							<li><strong>Resep Obat</strong> : Bagian dari resep yang lebih khusus, berisi informasi tentang obat yang harus dibeli dan dikonsumsi oleh pasien sesuai dengan petunjuk dokter. Ini mencakup nama obat, dosis, frekuensi penggunaan, dan jumlah obat yang diperlukan.
+								<ul class="erd_text_bullets">
+									<li>Atribut  : resep_obat_id, jumlah_obat, dosis, petunjuk, durasi, obat_id dan resep_id.</li>
+									<li>Relasi   : Tabel penghubung relasi many to many antara tabel Resep dan tabel Obat.</li>
+								</ul>
+							</li>
+							<li><strong>Obat</strong> : Bahan yang digunakan untuk pengobatan atau terapi terhadap kondisi medis pasien.
+								<ul class="erd_text_bullets">
+									<li>Atribut  : obat_id, nama_obat, deskripsi, jenis_obat dan harga.</li>
+									<li>Relasi   : Setiap Obat dapat memiliki banyak Resep Obat, karna memungkinkan pasien yang berbeda tetapi memiliki obat yang sama.</li>
+								</ul>
+							</li>
+							<li><strong>Pemesanan Layanan</strong> : Proses awal Pasien untuk melakukan pemeriksaan medis
+								<ul class="erd_text_bullets">
+									<li>Atribut  : pemesanan_layanan_id, tanggal_pemesanan_layanan, jenis_layanan, status dan pasien_id.</li>
+									<li>Relasi   : Setiap Pasien dapat memiliki banyak Pemesanan Layanan. Pemesanan Layanan dilakukan oleh Pasien untuk menggunakan layanan kesehatan digital seperti pemeriksaan laboratorium, tes, dll.</li>
+								</ul>
+							</li>
+							<li><strong>Pembayaran</strong> : Sistem transaksi untuk membayar biaya konsultasi dokter, obat, atau layanan medis lainnya yang diberikan kepada pasien
+								<ul class="erd_text_bullets">
+									<li>Atribut  : pembayaran_id, tanggal_pembayaran, jumlah, status_pembayaran dan pemesanan_layanan_id.</li>
+									<li>Relasi   : Setiap Pembayaran hanya dimiliki oleh setiap Pemesanan Layanan. Pembayaran dilakukan oleh Pasien untuk layanan yang diterima, baik itu untuk Konsultasi, Obat, atau Pemesanan Layanan.</li>
+								</ul>
+							</li>
+						</ol> 
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
